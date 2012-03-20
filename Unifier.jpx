@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="generalFormatting" name="baseCodeStyle" value="java/Java Standard.codestyle"/>
+  <property category="generalFormatting2" name="blockIndent" value="4"/>
+  <property category="generalFormatting2" name="continuationIndent" value="8"/>
+  <property category="generalFormatting2" name="overrideBasicFormatting" value="1"/>
+  <property category="javaFormatting" name="alignMultilineAssign" value="1"/>
+  <property category="javaFormatting" name="arrayInitDataOnNewLine" value="0"/>
+  <property category="javaFormatting" name="blankLinesAfterClass" value="2"/>
+  <property category="javaFormatting" name="catchOnNewLine" value="0"/>
+  <property category="javaFormatting" name="elseOnNewLine" value="0"/>
+  <property category="javaFormatting" name="extendsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="finallyOnNewLine" value="0"/>
+  <property category="javaFormatting" name="implementsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="indentCase" value="0"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;BLANK_LINE;javax;BLANK_LINE;(*)"/>
+  <property category="javaFormatting" name="packageThreshold" value="2"/>
+  <property category="javaFormatting" name="preservedBlankLinesInDecl" value="2"/>
+  <property category="javaFormatting" name="spaceBeforeLparen" value="0"/>
+  <property category="javaFormatting" name="whileOnNewLine" value="0"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="runtime" name="ConfigurationCount" value="3"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.0" name="ConfigurationName" value="MR Config"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="unifier.Start"/>
+  <property category="runtime.1" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.1" name="ConfigurationName" value="Test"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.1" name="application.class" value="unifier.Test"/>
+  <property category="runtime.2" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.2" name="ConfigurationName" value="SdfTest"/>
+  <property category="runtime.2" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.2" name="application.class" value="unifier.sdfparser.SdfTest"/>
+  <property category="runtime.3" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.3" name="ConfigurationName" value="TranslatorConstructorTest"/>
+  <property category="runtime.3" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.3" name="application.class" value="unifier.TranslatorConstructorTest"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore"/>
+  <property category="serverservices" name="single.server.name" value=""/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value="IPI RAS"/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2007"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.5.0_09-b03"/>
+  <property category="sys" name="JvmVersion" value="1.5"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="MetaDB;SynthesisLoader;antlr-3.0.1;Synthesis2B;antlr-2.7.5;SchemaTools"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="SourceVersion" value="1.5"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value="Unifier"/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="sys" name="uidesign.size.unifier.ExtensionExplorer" value="529,300"/>
+  <property category="sys" name="uidesign.size.unifier.ExtensionRegistrar" value="452,588"/>
+  <property category="sys" name="uidesign.size.unifier.ModelExplorer" value="503,570"/>
+  <property category="sys" name="uidesign.size.unifier.ModelRegistrar" value="565,720"/>
+</project>

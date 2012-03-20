@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refactor PUBLIC "-//Borland Software Corporation//Refactor 1.0//EN" "http://www.borland.com/devsupport/jbuilder/dtds/refactor_1_0.dtd">
+<refactor>
+  <rename-class id="6AP0U5RKXV2FZE2LBVUXW6N" creation-time="Wed Jun 13 19:01:13.375 MSD 2007">
+    <old-class-name>unifier.ModelRegistrar</old-class-name>
+    <new-class-name>unifier.ModelManager</new-class-name>
+  </rename-class>
+  <rename-method id="6AP0ZH0KAF5FSX3VJVUXW6N" creation-time="Thu Aug 16 17:31:35.890 MSD 2007">
+    <declaring-class-name>unifier.utils.TextFileJList</declaring-class-name>
+    <declared-method-signature>(Ljava/util/Set;)V</declared-method-signature>
+    <old-method-name>fillFromSet</old-method-name>
+    <new-method-name>fillFromFileContainerSet</new-method-name>
+  </rename-method>
+  <rename-class id="6AP0EOS2DV9FR7R23VUXW6N" creation-time="Thu Dec 06 17:05:19.546 MSK 2007">
+    <old-class-name>unifier.SDF2SO</old-class-name>
+    <new-class-name>unifier.SDF2RS</new-class-name>
+  </rename-class>
+  <rename-class id="6AP083IEA5AFPJFNDVUXW6N" creation-time="Thu Dec 13 15:48:08.609 MSK 2007">
+    <old-class-name>unifier.asfsdf.SortDef</old-class-name>
+    <new-class-name>unifier.asfsdf.Declaration</new-class-name>
+  </rename-class>
+  <rename-class id="4AP083IEA5AFPJFNDVUXW6N" creation-time="Thu Dec 13 16:03:17.703 MSK 2007">
+    <old-class-name>unifier.asfsdf.SortDefElement</old-class-name>
+    <new-class-name>unifier.asfsdf.DeclarationElement</new-class-name>
+  </rename-class>
+  <rename-class id="2AP083IEA5AFPJFNDVUXW6N" creation-time="Thu Dec 13 17:25:06.015 MSK 2007">
+    <old-class-name>unifier.ElementChooserDialog</old-class-name>
+    <new-class-name>unifier.utils.ElementChooserDialog</new-class-name>
+  </rename-class>
+  <rename-class id="0AP083IEA5AFPJFNDVUXW6N" creation-time="Thu Dec 13 17:27:23.546 MSK 2007">
+    <old-class-name>unifier.asfsdf.Element</old-class-name>
+    <new-class-name>unifier.similarity.Element</new-class-name>
+  </rename-class>
+  <rename-class id="Y9P083IEA5AFPJFNDVUXW6N" creation-time="Thu Dec 13 19:22:43.828 MSK 2007">
+    <old-class-name>unifier.asfsdf.Multiplicity</old-class-name>
+    <new-class-name>unifier.asfsdf.ListMultiplicity</new-class-name>
+  </rename-class>
+  <rename-method id="6AP0SGPTGEDFOXF6E2NBFAN0" creation-time="Tue Mar 04 15:56:58.343 MSK 2008">
+    <declaring-class-name>unifier.asfsdf.Declaration</declaring-class-name>
+    <declared-method-signature>()Z</declared-method-signature>
+    <old-method-name>consistOfOneSortName</old-method-name>
+    <new-method-name>consistsOfOneSortName</new-method-name>
+  </rename-method>
+  <rename-method id="4AP0SGPTGEDFOXF6E2NBFAN0" creation-time="Tue Mar 04 15:57:11.906 MSK 2008">
+    <declaring-class-name>unifier.asfsdf.Declaration</declaring-class-name>
+    <declared-method-signature>()Z</declared-method-signature>
+    <old-method-name>consistOfOneLiteral</old-method-name>
+    <new-method-name>consistsOfOneLiteral</new-method-name>
+  </rename-method>
+  <rename-method id="6AP021E3LIDFC1XEB2NBFAN0" creation-time="Fri Mar 07 13:07:33.203 MSK 2008">
+    <declaring-class-name>unifier.SDF2RS</declaring-class-name>
+    <declared-method-signature>()Ljava/lang/String;</declared-method-signature>
+    <old-method-name>getVocabularyName</old-method-name>
+    <new-method-name>getSchemaName</new-method-name>
+  </rename-method>
+  <rename-method id="4AP021E3LIDFC1XEB2NBFAN0" creation-time="Fri Mar 07 13:07:50.468 MSK 2008">
+    <declaring-class-name>unifier.SDF2RS</declaring-class-name>
+    <declared-method-signature>(Ljava/lang/String;)V</declared-method-signature>
+    <old-method-name>setVocabularyName</old-method-name>
+    <new-method-name>setSchemaName</new-method-name>
+  </rename-method>
+  <rename-method id="2AP021E3LIDFC1XEB2NBFAN0" creation-time="Fri Mar 07 13:08:29.656 MSK 2008">
+    <declaring-class-name>unifier.SDF2RS</declaring-class-name>
+    <declared-method-signature>()V</declared-method-signature>
+    <old-method-name>createVocabulary</old-method-name>
+    <new-method-name>generateSchema</new-method-name>
+  </rename-method>
+  <rename-class id="6AP031TVGRDF5YO8G2NBFAN0" creation-time="Thu Mar 13 18:19:36.484 MSK 2008">
+    <old-class-name>unifier.utils.SDF2RSException</old-class-name>
+    <new-class-name>unifier.SDF2RSException</new-class-name>
+  </rename-class>
+  <rename-package id="5AP0RX3OJYDFER0032NBFAN0" creation-time="Tue Mar 18 17:12:46.390 MSK 2008">
+    <old-package-name>unifier.utils</old-package-name>
+    <new-package-name>unifier.util</new-package-name>
+  </rename-package>
+  <rename-class id="6AP07ZJ920EF5P5EF2NBFAN0" creation-time="Wed Mar 19 18:40:19.296 MSK 2008">
+    <old-class-name>unifier.ExtensionRegistrar_jButtonCreateDictionary_actionAdapter</old-class-name>
+    <new-class-name>unifier.ExtensionRegistrar_jButtonCreateReferenceSchemaTemplate_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-method id="4AP07ZJ920EF5P5EF2NBFAN0" creation-time="Wed Mar 19 18:41:08.406 MSK 2008">
+    <declaring-class-name>unifier.ExtensionRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonCreateDictionary_actionPerformed</old-method-name>
+    <new-method-name>jButtonCreateReferenceSchemaTemplate_actionPerformed</new-method-name>
+  </rename-method>
+  <rename-class id="2AP07ZJ920EF5P5EF2NBFAN0" creation-time="Wed Mar 19 19:01:22.406 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jButtonCreateVocabulary_actionAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jButtonCreateReferenceSchemaTemplate_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-method id="0AP07ZJ920EF5P5EF2NBFAN0" creation-time="Wed Mar 19 19:02:43.203 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonCreateVocabulary_actionPerformed</old-method-name>
+    <new-method-name>jButtonCreateReferenceSchemaTemplate_actionPerformed</new-method-name>
+  </rename-method>
+  <rename-class id="6AP0JVDF91EFI1Z1G2NBFAN0" creation-time="Thu Mar 20 14:48:34.812 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jButtonCanonSampleAmnSemanticsRecDelete_actionAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jButtonTargetSampleAmnSemanticsRecDelete_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-class id="4AP0JVDF91EFI1Z1G2NBFAN0" creation-time="Thu Mar 20 14:48:48.781 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jButtonCanonSampleAmnSemanticsRecExport_actionAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jButtonTargetSampleAmnSemanticsRecExport_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-class id="6AP0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 14:59:03.484 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jButtonBrowseSampleCanonSpec_actionAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jButtonBrowseSampleTargetSpec_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-class id="4AP0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 14:59:15.656 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jButtonTranslateSampleCanonSpec2Amn_actionAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jButtonTranslateSampleTargetSpec2Amn_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-class id="2AP0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 14:59:29.140 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jButtonCanonSampleAmnSemanticsRecBrowse_actionAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jButtonTargetSampleAmnSemanticsRecBrowse_actionAdapter</new-class-name>
+  </rename-class>
+  <rename-class id="0AP0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 14:59:42.718 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jListCanonSampleAmnSemanticsNonRecFiles_mouseAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jListTargetSampleAmnSemanticsNonRecFiles_mouseAdapter</new-class-name>
+  </rename-class>
+  <rename-class id="Y9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 14:59:55.656 MSK 2008">
+    <old-class-name>unifier.ModelRegistrar_jListCanonSampleAmnSemanticsRecFiles_mouseAdapter</old-class-name>
+    <new-class-name>unifier.ModelRegistrar_jListTargetSampleAmnSemanticsRecFiles_mouseAdapter</new-class-name>
+  </rename-class>
+  <rename-method id="W9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:01:27.296 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/MouseEvent;)V</declared-method-signature>
+    <old-method-name>jListCanonSampleAmnSemanticsNonRecFiles_mouseClicked</old-method-name>
+    <new-method-name>jListTargetSampleAmnSemanticsNonRecFiles_mouseClicked</new-method-name>
+  </rename-method>
+  <rename-method id="U9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:01:38.343 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/MouseEvent;)V</declared-method-signature>
+    <old-method-name>jListCanonSampleAmnSemanticsRecFiles_mouseClicked</old-method-name>
+    <new-method-name>jListTargetSampleAmnSemanticsRecFiles_mouseClicked</new-method-name>
+  </rename-method>
+  <rename-method id="S9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:01:52.250 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonBrowseSampleCanonSpec_actionPerformed</old-method-name>
+    <new-method-name>jButtonBrowseSampleTargetSpec_actionPerformed</new-method-name>
+  </rename-method>
+  <rename-method id="Q9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:02:05.406 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonTranslateSampleCanonSpec2Amn_actionPerformed</old-method-name>
+    <new-method-name>jButtonTranslateSampleTargetSpec2Amn_actionPerformed</new-method-name>
+  </rename-method>
+  <rename-method id="O9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:20:37.531 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonCanonSampleAmnSemanticsRecExport_actionPerformed</old-method-name>
+    <new-method-name>jButtonTargetSampleAmnSemanticsRecExport_actionPerformed</new-method-name>
+  </rename-method>
+  <rename-method id="M9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:20:48.468 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonCanonSampleAmnSemanticsRecDelete_actionPerformed</old-method-name>
+    <new-method-name>jButtonTargetSampleAmnSemanticsRecDelete_actionPerformed</new-method-name>
+  </rename-method>
+  <rename-method id="K9P0NYUS91EFCCVKF2NBFAN0" creation-time="Thu Mar 20 15:28:12.656 MSK 2008">
+    <declaring-class-name>unifier.ModelRegistrar</declaring-class-name>
+    <declared-method-signature>(Ljava/awt/event/ActionEvent;)V</declared-method-signature>
+    <old-method-name>jButtonCanonSampleAmnSemanticsRecBrowse_actionPerformed</old-method-name>
+    <new-method-name>jButtonTargetSampleAmnSemanticsRecBrowse_actionPerformed</new-method-name>
+  </rename-method>
+</refactor>

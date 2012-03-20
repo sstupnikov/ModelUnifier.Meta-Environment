@@ -1,0 +1,15 @@
+CODASYL
+Conference on Data Systems Languages
+Network (CODASYL) Data Model
+01/01/1969
+http://coronet.iicm.tugraz.at/wbtmaster/allcoursescontent/netlib/library.htm
+
+
+OWL  
+Web Ontology Language
+OWL Web Ontology Language Semantics and Abstract Syntax. Section 2. Abstract Syntax
+10 February 2004
+http://www.w3.org/TR/2004/REC-owl-semantics-20040210/syntax.html
+OWL Web Ontology Language Semantics and Abstract Syntax. Section 3. Direct Model-Theoretic Semantics
+10 February 2004
+http://www.w3.org/TR/2004/REC-owl-semantics-20040210/direct.html

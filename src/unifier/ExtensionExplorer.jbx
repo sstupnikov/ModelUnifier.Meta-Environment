@@ -1,0 +1,22 @@
+[PropertyInfo]
+db,meta.DB,false,false, , ,false,<default>
+extendingModel,meta.ExtensionRegDef,false,false, , ,false,<default>
+gridBagLayoutEE,java.awt.GridBagLayout,false,false, , ,false,<default>
+JButtonOpen,javax.swing.JButton,false,false, , ,false,<default>
+JButtonSubmitAsExtendingModel,javax.swing.JButton,false,false, , ,false,<default>
+JButtonSubmitAsRefinedExtension,javax.swing.JButton,false,false, , ,false,<default>
+JListExtensionExplorer,javax.swing.JList,false,false, , ,false,<default>
+JPanelExtensionExplorerButtons,javax.swing.JPanel,false,false, , ,false,<default>
+JScrollPaneExtensionDescription,javax.swing.JScrollPane,false,false, , ,false,<default>
+JScrollPaneExtensionExplorer,javax.swing.JScrollPane,false,false, , ,false,<default>
+JSplitPaneExtensionExplorer,javax.swing.JSplitPane,false,false, , ,false,<default>
+JTextAreaExtensionDescription,javax.swing.JTextArea,false,false, , ,false,<default>
+logger,java.util.logging.Logger,false,false, , ,false,<default>
+parentExtensionRegistrar,unifier.ExtensionRegistrar,false,false, , ,false,<default>
+parentModelRegistrar,unifier.ModelRegistrar,false,false, , ,false,<default>
+refiningModel,meta.ModelRegDef,false,false, , ,false,<default>
+[IconNames]
+
+
+
+
