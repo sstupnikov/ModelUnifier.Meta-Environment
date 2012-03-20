@@ -1,0 +1,281 @@
+equations
+
+[create-IRS-Section]
+Class-Declarator-Comma-MayBeEmpty-List := create-Class-Declarator-Comma-MayBeEmpty-List( Directive-MayBeEmpty-List  )
+====>
+create-IRS-Section(
+Ontology ( OntologyID? Directive-MayBeEmpty-List ) 
+) =
+class_specification : Class-Declarator-Comma-MayBeEmpty-List ; 
+
+[create-Abstract-Type]
+Abstract-Type-Metaframe? := create-Abstract-Type-Metaframe(),
+Supertype-List := create-Synthesis-Type-Name-Comma-MayBeEmpty-List(),
+Metaclass-Name-List := create-Metaclass-Name-Comma-MayBeEmpty-List(),
+Synthesis-Id := create-Synthesis-Id( OwlID ),
+Attribute-Specification-List := create-Attribute-Specification-MayBeEmpty-List( Description-MayBeEmpty-List , ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List )  )
+====>
+create-Abstract-Type(
+Class ( ClassID Deprecated? Modality Annotation-MayBeEmpty-List Description-MayBeEmpty-List ) 
+) =
+{ Synthesis-Id ; in : type , Metaclass-Name-List ; Abstract-Type-Metaframe? supertype : Supertype-List ; Attribute-Specification-List } 
+
+[create-Attribute-Specification-List]
+Attribute-Specification-MayBeEmpty-List := create-Attribute-Specification-MayBeEmpty-List( Description, ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List )  )
+====>
+create-Attribute-Specification-List() =
+Attribute-Specification-MayBeEmpty-List 
+
+[create-Module-Metaframe]
+Metaframe-Slot-Semicolon-MayBeEmpty-List := create-Metaframe-Slot-Semicolon-MayBeEmpty-List( Cardinality )
+====>
+create-Module-Metaframe() =
+metaframe Metaframe-Slot-Semicolon-MayBeEmpty-List end 
+
+[create-Superclass-Id]
+Synthesis-Id := create-Synthesis-Id( OwlID )
+====>
+create-Superclass-Id() =
+Synthesis-Id 
+
+[create-Assertion-Of-Definiteness]
+Attribute-Name-List := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID )
+====>
+create-Assertion-Of-Definiteness() =
+{ obligatory ; { Attribute-Name-List } } 
+
+[create-Slot-Id]
+Synthesis-Id := create-Synthesis-Id( OwlID )
+====>
+create-Slot-Id() =
+Synthesis-Id 
+
+[create-Attribute-Specification]
+Synthesis-Id := create-Synthesis-Id( OwlID ),
+Attribute-Metaslot? := create-Attribute-Metaslot(),
+Attribute-Type := create-Attribute-Type()
+====>
+create-Attribute-Specification(
+Description,
+ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List ) 
+) =
+Synthesis-Id : Attribute-Type ; Attribute-Metaslot? 
+
+[create-IRA-Section]
+Assertion-Comma-MayBeEmpty-List := create-Assertion-Comma-MayBeEmpty-List()
+====>
+create-IRA-Section() =
+assertion : Assertion-Comma-MayBeEmpty-List ; 
+
+[create-Metaclass-Name-List]
+Metaclass-Name-Comma-MayBeEmpty-List := create-Metaclass-Name-Comma-MayBeEmpty-List()
+====>
+create-Metaclass-Name-List() =
+Metaclass-Name-Comma-MayBeEmpty-List 
+
+[create-Header]
+Metaclass-Name-List := create-Metaclass-Name-Comma-MayBeEmpty-List(),
+Module-Metaframe? := create-Module-Metaframe(),
+Synthesis-Id := create-Synthesis-Id( OwlID )
+====>
+create-Header() =
+Synthesis-Id ; in : module , Metaclass-Name-List ; Module-Metaframe? 
+
+[create-Assertion-Of-Uniqueness]
+Attribute-Name-List := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID )
+====>
+create-Assertion-Of-Uniqueness() =
+{ unique ; { Attribute-Name-List } } 
+
+[create-Assertion-List]
+Assertion-List-Element-MayBeEmpty-List := create-Assertion-List-Element-MayBeEmpty-List()
+====>
+create-Assertion-List() =
+Assertion-List-Element-MayBeEmpty-List 
+
+[create-Abstract-Type-Metaframe]
+Assertion-List := create-Assertion-List-Element-MayBeEmpty-List()
+====>
+create-Abstract-Type-Metaframe() =
+metaframe Assertion-List end 
+
+[create-Attribute-Metaslot]
+Metaframe-Slot-Semicolon-MayBeEmpty-List := create-Metaframe-Slot-Semicolon-MayBeEmpty-List( Cardinality )
+====>
+create-Attribute-Metaslot() =
+metaslot Metaframe-Slot-Semicolon-MayBeEmpty-List ; end 
+
+[create-Assertion-Function]
+Attribute-Name-List := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID ),
+Synthesis-Id1 := create-Synthesis-Id( OwlID ),
+Attribute-Name-List1 := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID ),
+Synthesis-Id := create-Synthesis-Id( OwlID )
+====>
+create-Assertion-Function() =
+{ func ; { Synthesis-Id ; Attribute-Name-List } , { Synthesis-Id1 ; Attribute-Name-List1 } } 
+
+[create-Attribute-Specification-MayBeEmpty-List---Empty]
+create-Attribute-Specification-MayBeEmpty-List() =
+
+
+[create-Module-Specification]
+IRA-Section? := create-IRA-Section(),
+Type-Section? := create-Type-Section( Ontology ( OntologyID? Directive-MayBeEmpty-List )  ),
+IRS-Section? := create-IRS-Section( Ontology ( OntologyID? Directive-MayBeEmpty-List )  )
+====>
+create-Module-Specification() =
+Type-Section? IRS-Section? IRA-Section? 
+
+[create-Supertype-List]
+Synthesis-Type-Name-Comma-MayBeEmpty-List := create-Synthesis-Type-Name-Comma-MayBeEmpty-List()
+====>
+create-Supertype-List() =
+Synthesis-Type-Name-Comma-MayBeEmpty-List 
+
+[create-Type-Specification-List]
+Type-Specification-Comma-MayBeEmpty-List := create-Type-Specification-Comma-MayBeEmpty-List( Directive )
+====>
+create-Type-Specification-List() =
+Type-Specification-Comma-MayBeEmpty-List 
+
+[create-Type-Specification-Comma-MayBeEmpty-List---Empty]
+create-Type-Specification-Comma-MayBeEmpty-List() =
+
+
+[create-Synthesis-Type-Name]
+Synthesis-Id := create-Synthesis-Id( OwlID )
+====>
+create-Synthesis-Type-Name() =
+Synthesis-Id 
+
+[create-Assertion-List-Element]
+Synthesis-Id := create-Synthesis-Id( OwlID ),
+Assertion := create-Assertion()
+====>
+create-Assertion-List-Element() =
+Synthesis-Id : Assertion ; 
+
+[create-Module-Def]
+Module-Specification := create-Module-Specification(),
+Header := create-Header()
+====>
+create-Module-Def(
+Ontology ( OntologyID? Directive-MayBeEmpty-List ) 
+) =
+{ Header Module-Specification } 
+
+[create-Class-Metaframe]
+Formula? := create-Formula()
+====>
+create-Class-Metaframe() =
+metaframe { { Formula? } } end 
+
+[create-Range]
+Synthesis-Type-Name-Comma-MayBeEmpty-List := create-Synthesis-Type-Name-Comma-MayBeEmpty-List()
+====>
+create-Range() =
+Synthesis-Type-Name-Comma-MayBeEmpty-List 
+
+[create-Attribute-Name-List]
+Synthesis-Id-Comma-MayBeEmpty-List := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID )
+====>
+create-Attribute-Name-List() =
+Synthesis-Id-Comma-MayBeEmpty-List 
+
+[create-Attribute-Specification-MayBeEmpty-List]
+Attribute-Specification := create-Attribute-Specification( Description, ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List )  ),
+Attribute-Specification-MayBeEmpty-List := create-Attribute-Specification-MayBeEmpty-List( Description-MayBeEmpty-List , ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List )  )
+====>
+create-Attribute-Specification-MayBeEmpty-List(Description   Description-MayBeEmpty-List , ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List )  ) =
+Attribute-Specification  Attribute-Specification-MayBeEmpty-List
+
+[create-Class-Declarator-Comma-MayBeEmpty-List---Empty]
+create-Class-Declarator-Comma-MayBeEmpty-List() =
+
+
+[create-Type-Section]
+Type-Specification-List := create-Type-Specification-Comma-MayBeEmpty-List( Directive-MayBeEmpty-List  )
+====>
+create-Type-Section(
+Ontology ( OntologyID? Directive-MayBeEmpty-List ) 
+) =
+type : Type-Specification-List ; 
+
+[create-Domain]
+Synthesis-Type-Name-Comma-MayBeEmpty-List := create-Synthesis-Type-Name-Comma-MayBeEmpty-List()
+====>
+create-Domain() =
+Synthesis-Type-Name-Comma-MayBeEmpty-List 
+
+[create-Type-Specification]
+Abstract-Type := create-Abstract-Type( Class ( ClassID Deprecated? Modality Annotation-MayBeEmpty-List Description-MayBeEmpty-List )  )
+====>
+create-Type-Specification(
+Directive
+) =
+Abstract-Type 
+
+[create-Association-Metaclass]
+Range := create-Synthesis-Type-Name-Comma-MayBeEmpty-List(),
+Synthesis-Id := create-Synthesis-Id( OwlID ),
+Bounds := create-Bounds(),
+Bounds1 := create-Bounds(),
+Domain := create-Synthesis-Type-Name-Comma-MayBeEmpty-List(),
+Metaclass-Name-List := create-Metaclass-Name-Comma-MayBeEmpty-List(),
+Metaclass-Name := create-Metaclass-Name(),
+Attribute-Metaslot? := create-Attribute-Metaslot(),
+Superclass-List := create-Superclass-Id-Comma-MayBeEmpty-List()
+====>
+create-Association-Metaclass(
+ObjectProperty ( IndividualvaluedPropertyID Deprecated? Annotation-MayBeEmpty-List SuperProperty-MayBeEmpty-List InverseOf? Symmetric? PropertyKind? ObjectPropertyDomain-MayBeEmpty-List ObjectPropertyRange-MayBeEmpty-List ) 
+) =
+{ Synthesis-Id ; in : association , Metaclass-Name-List ; superclass : Superclass-List ; inverse : Metaclass-Name ; instance_section : { association_type : { Bounds , Bounds1 } ; Attribute-Metaslot? domain : Domain ; range : Range ; } ; } 
+
+[create-Type-Specification-Comma-MayBeEmpty-List]
+Type-Specification := create-Type-Specification( Directive ),
+Type-Specification-Comma-MayBeEmpty-List := create-Type-Specification-Comma-MayBeEmpty-List( Directive-MayBeEmpty-List  )
+====>
+create-Type-Specification-Comma-MayBeEmpty-List(Directive   Directive-MayBeEmpty-List  ) =
+Type-Specification , Type-Specification-Comma-MayBeEmpty-List
+
+[create-Class-Declarator-Comma-MayBeEmpty-List]
+Class-Declarator-Comma-MayBeEmpty-List := create-Class-Declarator-Comma-MayBeEmpty-List( Directive-MayBeEmpty-List  ),
+Class-Declarator := create-Class-Declarator( Directive )
+====>
+create-Class-Declarator-Comma-MayBeEmpty-List(Directive   Directive-MayBeEmpty-List  ) =
+Class-Declarator , Class-Declarator-Comma-MayBeEmpty-List
+
+[create-Superclass-List]
+Superclass-Id-Comma-MayBeEmpty-List := create-Superclass-Id-Comma-MayBeEmpty-List()
+====>
+create-Superclass-List() =
+Superclass-Id-Comma-MayBeEmpty-List 
+
+[create-Assertion-Of-Conditional-Uniqueness]
+Attribute-Name-List := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID )
+====>
+create-Assertion-Of-Conditional-Uniqueness() =
+{ unique_nonnull ; { Attribute-Name-List } } 
+
+[create-Assertion-Partial-Function]
+Attribute-Name-List := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID ),
+Attribute-Name-List1 := create-Synthesis-Id-Comma-MayBeEmpty-List( OwlID ),
+Synthesis-Id := create-Synthesis-Id( OwlID ),
+Synthesis-Id1 := create-Synthesis-Id( OwlID )
+====>
+create-Assertion-Partial-Function() =
+{ pfunc ; { Synthesis-Id ; Attribute-Name-List } , { Synthesis-Id1 ; Attribute-Name-List1 } } 
+
+[create-Bounds]
+Upper-Bound := create-Upper-Bound(),
+Lower-Bound := create-Lower-Bound()
+====>
+create-Bounds() =
+{ Lower-Bound , Upper-Bound } 
+
+[create-Metaclass-Name]
+Synthesis-Id := create-Synthesis-Id( OwlID )
+====>
+create-Metaclass-Name() =
+Synthesis-Id 
+

@@ -1,0 +1,214 @@
+unifier/OWL-Syntax2AssociationMetaclassExtension/OWL-Syntax2AssociationMetaclassExtensionTranslator
+
+imports unifier/synthesis/AssociationMetaclassExtension
+imports unifier/owl/OWL-Syntax
+
+
+exports
+
+context-free start-symbols
+    Module-Def
+    Type-Expression
+    Formula
+    Term
+    
+context-free syntax
+    
+    create-Class-Metaframe() -> Class-Metaframe
+    create-Class-Declarator-Comma-MayBeEmpty-List((Directive)*) -> {Class-Declarator ","}*
+    create-Term() -> Term
+    create-Assertion-Partial-Function() -> Assertion-Partial-Function
+    create-Attribute-Type() -> Attribute-Type
+    create-IRS-Section(Ontology) -> IRS-Section
+    create-Attribute-Name-List() -> Attribute-Name-List
+    create-Superclass-Id-Comma-MayBeEmpty-List() -> {Superclass-Id ","}*
+    create-Upper-Bound() -> Upper-Bound
+    create-Typed-Variable() -> Typed-Variable
+    create-Reduct() -> Reduct
+    create-Module-Metaframe() -> Module-Metaframe
+    create-Assertion-Of-Definiteness() -> Assertion-Of-Definiteness
+    create-Attribute-Metaslot() -> Attribute-Metaslot
+    create-Type-Expression() -> Type-Expression
+    create-Type-Specification(Directive) -> Type-Specification
+    create-Synthesis-Type-Name-Comma-MayBeEmpty-List() -> {Synthesis-Type-Name ","}*
+    create-Abstract-Type-Metaframe() -> Abstract-Type-Metaframe
+    create-Attribute-Specification-MayBeEmpty-List((Description)*, ObjectPropertyAxiom) -> (Attribute-Specification)*
+    create-Assertion-Function() -> Assertion-Function
+    create-Class-Declarator(Directive) -> Class-Declarator
+    create-Metaclass-Name-Comma-MayBeEmpty-List() -> {Metaclass-Name ","}*
+    create-Attribute-Specification-List() -> Attribute-Specification-List
+    create-Assertion-List-Element() -> Assertion-List-Element
+    create-Assertion-List() -> Assertion-List
+    create-Assertion() -> Assertion
+    create-Attribute-Specification(Description, ObjectPropertyAxiom) -> Attribute-Specification
+    create-Synthesis-Type-Name() -> Synthesis-Type-Name
+    create-Type-Section(Ontology) -> Type-Section
+    create-Superclass-List() -> Superclass-List
+    create-Supertype-List() -> Supertype-List
+    create-Module-Def(Ontology) -> Module-Def
+    create-Assertion-List-Element-MayBeEmpty-List() -> (Assertion-List-Element)*
+    create-Header() -> Header
+    create-Metaframe-Slot(Cardinality) -> Metaframe-Slot
+    create-Metaframe-Slot-Semicolon-MayBeEmpty-List(Cardinality) -> {Metaframe-Slot ";"}*
+    create-Abstract-Type(ClassAxiom) -> Abstract-Type
+    create-Superclass-Id() -> Superclass-Id
+    create-IRA-Section() -> IRA-Section
+    create-Module-Specification() -> Module-Specification
+    create-Slot-Id() -> Slot-Id
+    create-Type-Specification-Comma-MayBeEmpty-List((Directive)*) -> {Type-Specification ","}*
+    create-Domain() -> Domain
+    create-Type-Specification-List() -> Type-Specification-List
+    create-Arithmetic-Expression() -> Arithmetic-Expression
+    create-Synthesis-Id(OwlID) -> Synthesis-Id
+    create-Assertion-Comma-MayBeEmpty-List() -> {Assertion ","}*
+    create-Assertion-Of-Conditional-Uniqueness() -> Assertion-Of-Conditional-Uniqueness
+    create-Metaclass-Name-List() -> Metaclass-Name-List
+    create-Bounds() -> Bounds
+    create-Association-Metaclass(ObjectPropertyAxiom) -> Association-Metaclass
+    create-Lower-Bound() -> Lower-Bound
+    create-Range() -> Range
+    create-Formula() -> Formula
+    create-Assertion-Of-Uniqueness() -> Assertion-Of-Uniqueness
+    create-Synthesis-Id-Comma-MayBeEmpty-List(OwlID) -> {Synthesis-Id ","}*
+    create-Metaclass-Name() -> Metaclass-Name
+    create-Synthesis-Built-In-Type() -> Synthesis-Built-In-Type
+    
+variables
+    "DataLiteral"[0-9]* -> DataLiteral
+    "OntologyPropertyID"[0-9]* -> OntologyPropertyID
+    "DatatypePropertyAxiom"[0-9]* -> DatatypePropertyAxiom
+    "ObjectPropertyDomain-MayBeEmpty-List"[0-9]* -> (ObjectPropertyDomain)*
+    "AnnotationPropertyID"[0-9]* -> AnnotationPropertyID
+    "IndividualID"[0-9]* -> IndividualID
+    "IndividualType"[0-9]* -> IndividualType
+    "RestrictionID"[0-9]* -> RestrictionID
+    "OwlID"[0-9]* -> OwlID
+    "EnumeratedClassAxiom"[0-9]* -> EnumeratedClassAxiom
+    "OntologyPropertyAxiom"[0-9]* -> OntologyPropertyAxiom
+    "DifferentIndividualsFact"[0-9]* -> DifferentIndividualsFact
+    "IndividualallID"[0-9]* -> IndividualallID
+    "Axiom"[0-9]* -> Axiom
+    "DatatypeAxiom"[0-9]* -> DatatypeAxiom
+    "NamespaceId"[0-9]* -> NamespaceId
+    "DatavaluedPropertyID"[0-9]* -> DatavaluedPropertyID
+    "LexicalForm"[0-9]* -> LexicalForm
+    "AnnotationValue"[0-9]* -> AnnotationValue
+    "PlainLiteral"[0-9]* -> PlainLiteral
+    "ValueValue"[0-9]* -> ValueValue
+    "Directive-MayBeEmpty-List"[0-9]* -> (Directive)*
+    "IndividualvaluedPropertyID"[0-9]* -> IndividualvaluedPropertyID
+    "PropertyKind"[0-9]* -> PropertyKind
+    "Annotation"[0-9]* -> Annotation
+    "Individual"[0-9]* -> Individual
+    "ClassAxiom"[0-9]* -> ClassAxiom
+    "DatatypeID"[0-9]* -> DatatypeID
+    "ObjectPropertyRange"[0-9]* -> ObjectPropertyRange
+    "DataRange"[0-9]* -> DataRange
+    "AnnotationDirective"[0-9]* -> AnnotationDirective
+    "EquivalentClassesAxiom"[0-9]* -> EquivalentClassesAxiom
+    "ObjectPropertyRange-MayBeEmpty-List"[0-9]* -> (ObjectPropertyRange)*
+    "Type"[0-9]* -> Type
+    "ObjectPropertyDomain"[0-9]* -> ObjectPropertyDomain
+    "TypedLiteral"[0-9]* -> TypedLiteral
+    "AnnotationPropertyAxiom"[0-9]* -> AnnotationPropertyAxiom
+    "SubPropertyOfAxiom"[0-9]* -> SubPropertyOfAxiom
+    "EquivalentPropertiesAxiom"[0-9]* -> EquivalentPropertiesAxiom
+    "NamespaceDef"[0-9]* -> NamespaceDef
+    "Deprecated?"[0-9]* -> ("Deprecated")?
+    "Fact"[0-9]* -> Fact
+    "Annotation-MayBeEmpty-List"[0-9]* -> (Annotation)*
+    "PropertyKind?"[0-9]* -> (PropertyKind)?
+    "DisjointClassesAxiom"[0-9]* -> DisjointClassesAxiom
+    "SubClassOfAxiom"[0-9]* -> SubClassOfAxiom
+    "Description"[0-9]* -> Description
+    "ValueRange"[0-9]* -> ValueRange
+    "OwlSpecification"[0-9]* -> OwlSpecification
+    "Directive"[0-9]* -> Directive
+    "Symmetric?"[0-9]* -> ("Symmetric")?
+    "InverseOf"[0-9]* -> InverseOf
+    "Restriction"[0-9]* -> Restriction
+    "InverseOf?"[0-9]* -> (InverseOf)?
+    "SuperProperty"[0-9]* -> SuperProperty
+    "Cardinality"[0-9]* -> Cardinality
+    "Description-MayBeEmpty-List"[0-9]* -> (Description)*
+    "ObjectPropertyAxiom"[0-9]* -> ObjectPropertyAxiom
+    "SuperProperty-MayBeEmpty-List"[0-9]* -> (SuperProperty)*
+    "RestrictionComponentValue"[0-9]* -> RestrictionComponentValue
+    "Modality"[0-9]* -> Modality
+    "Value"[0-9]* -> Value
+    "NamespaceValue"[0-9]* -> NamespaceValue
+    "LanguageTag"[0-9]* -> LanguageTag
+    "ClassID"[0-9]* -> ClassID
+    "OntologyID"[0-9]* -> OntologyID
+    "SameIndividualFact"[0-9]* -> SameIndividualFact
+    "RestrictionComponent"[0-9]* -> RestrictionComponent
+    "OntologyID?"[0-9]* -> (OntologyID)?
+    "Ontology"[0-9]* -> Ontology
+    
+variables
+    "Slot-Id"[0-9]* -> Slot-Id
+    "Synthesis-Id"[0-9]* -> Synthesis-Id
+    "Attribute-Specification-List"[0-9]* -> Attribute-Specification-List
+    "Assertion-Of-Conditional-Uniqueness"[0-9]* -> Assertion-Of-Conditional-Uniqueness
+    "Assertion-Of-Definiteness"[0-9]* -> Assertion-Of-Definiteness
+    "Module-Def"[0-9]* -> Module-Def
+    "Attribute-Type"[0-9]* -> Attribute-Type
+    "Assertion-List-Element-MayBeEmpty-List"[0-9]* -> (Assertion-List-Element)*
+    "Supertype-List"[0-9]* -> Supertype-List
+    "Metaclass-Name"[0-9]* -> Metaclass-Name
+    "Formula"[0-9]* -> Formula
+    "Metaclass-Name-Comma-MayBeEmpty-List"[0-9]* -> {Metaclass-Name ","}*
+    "Superclass-Id"[0-9]* -> Superclass-Id
+    "IRA-Section"[0-9]* -> IRA-Section
+    "Superclass-List"[0-9]* -> Superclass-List
+    "Attribute-Metaslot"[0-9]* -> Attribute-Metaslot
+    "Type-Expression"[0-9]* -> Type-Expression
+    "Attribute-Specification-MayBeEmpty-List"[0-9]* -> (Attribute-Specification)*
+    "Assertion-List"[0-9]* -> Assertion-List
+    "Assertion-Partial-Function"[0-9]* -> Assertion-Partial-Function
+    "Assertion-Comma-MayBeEmpty-List"[0-9]* -> {Assertion ","}*
+    "Module-Specification"[0-9]* -> Module-Specification
+    "Synthesis-Type-Name"[0-9]* -> Synthesis-Type-Name
+    "Domain"[0-9]* -> Domain
+    "Type-Specification-List"[0-9]* -> Type-Specification-List
+    "Metaframe-Slot"[0-9]* -> Metaframe-Slot
+    "Module-Metaframe?"[0-9]* -> (Module-Metaframe)?
+    "Type-Section"[0-9]* -> Type-Section
+    "Abstract-Type"[0-9]* -> Abstract-Type
+    "Type-Specification-Comma-MayBeEmpty-List"[0-9]* -> {Type-Specification ","}*
+    "Association-Metaclass"[0-9]* -> Association-Metaclass
+    "Module-Metaframe"[0-9]* -> Module-Metaframe
+    "Class-Declarator-Comma-MayBeEmpty-List"[0-9]* -> {Class-Declarator ","}*
+    "Superclass-Id-Comma-MayBeEmpty-List"[0-9]* -> {Superclass-Id ","}*
+    "IRS-Section?"[0-9]* -> (IRS-Section)?
+    "Class-Metaframe"[0-9]* -> Class-Metaframe
+    "Reduct"[0-9]* -> Reduct
+    "Header"[0-9]* -> Header
+    "Term"[0-9]* -> Term
+    "Lower-Bound"[0-9]* -> Lower-Bound
+    "Attribute-Specification"[0-9]* -> Attribute-Specification
+    "Bounds"[0-9]* -> Bounds
+    "Arithmetic-Expression"[0-9]* -> Arithmetic-Expression
+    "Typed-Variable"[0-9]* -> Typed-Variable
+    "Assertion-Function"[0-9]* -> Assertion-Function
+    "Metaclass-Name-List"[0-9]* -> Metaclass-Name-List
+    "Synthesis-Built-In-Type"[0-9]* -> Synthesis-Built-In-Type
+    "Metaframe-Slot-Semicolon-MayBeEmpty-List"[0-9]* -> {Metaframe-Slot ";"}*
+    "IRA-Section?"[0-9]* -> (IRA-Section)?
+    "Range"[0-9]* -> Range
+    "Type-Specification"[0-9]* -> Type-Specification
+    "Assertion"[0-9]* -> Assertion
+    "Upper-Bound"[0-9]* -> Upper-Bound
+    "Assertion-List-Element"[0-9]* -> Assertion-List-Element
+    "Attribute-Metaslot?"[0-9]* -> (Attribute-Metaslot)?
+    "IRS-Section"[0-9]* -> IRS-Section
+    "Synthesis-Id-Comma-MayBeEmpty-List"[0-9]* -> {Synthesis-Id ","}*
+    "Type-Section?"[0-9]* -> (Type-Section)?
+    "Class-Declarator"[0-9]* -> Class-Declarator
+    "Synthesis-Type-Name-Comma-MayBeEmpty-List"[0-9]* -> {Synthesis-Type-Name ","}*
+    "Attribute-Name-List"[0-9]* -> Attribute-Name-List
+    "Formula?"[0-9]* -> (Formula)?
+    "Assertion-Of-Uniqueness"[0-9]* -> Assertion-Of-Uniqueness
+    "Abstract-Type-Metaframe"[0-9]* -> Abstract-Type-Metaframe
+    "Abstract-Type-Metaframe?"[0-9]* -> (Abstract-Type-Metaframe)?
+    

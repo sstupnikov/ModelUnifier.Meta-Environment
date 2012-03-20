@@ -1,0 +1,27 @@
+unifier/owl2synthesis/owlTranslator
+
+imports unifier/synthesis/Synthesis-Syntax
+imports unifier/owl/OWL-Syntax
+
+
+exports
+
+context-free start-symbols
+    Type-Def
+    Module-Def
+    
+context-free syntax
+    
+    t-Attribute-Specification-List({Description}*,{Directive}*) -> {Attribute-Specification}*
+    t-Module-Name(OwlSpecification,(OntologyID)?) -> Synthesis-Id
+    t-Type-Supertype-Section({Description}*) -> ("supertype" ";" Supertype-List ";")?
+    t-Type-Specification-List({Directive}*) -> {Type-Specification ","}*
+    
+variables
+    "OntologyID?"[0-9]* -> (OntologyID)?
+    "OwlID"[0-9]* -> OwlID
+    "NamespaceDef*"[0-9]* -> {NamespaceDef}*
+    
+variables
+    "Synthesis-Id"[0-9]* -> Synthesis-Id
+    
